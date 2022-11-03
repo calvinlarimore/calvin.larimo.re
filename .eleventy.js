@@ -1,6 +1,8 @@
 module.exports = function (config) {
-	config.addPassthroughCopy({ "./src/_includes/style.css": "style.css" })
-	config.addPassthroughCopy({ "./src/_includes/FSEX302-alt.ttf": "FSEX302-alt.ttf" })
+	config.addPassthroughCopy({ "./src/_includes/style.css": "style.css" });
+	config.addPassthroughCopy({ "./src/_includes/FSEX302-alt.ttf": "FSEX302-alt.ttf" });
+	
+	config.addPassthroughCopy({ "CNAME": "CNAME" });
 
 	config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
