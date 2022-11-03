@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="/style.css"><title>Calvin Larimore - Deploying Eleventy on GitHub Pages</title></head>
+<body>
+	<nav>
+		<h1><a href="/">Calvin Larimore</a></h1><h2><a title="" href="/">&lt;- Home</a></h2><hr class="big">
+	</nav>
+	<main>
+		
+<h1>Deploying Eleventy on GitHub Pages</h1>
+<p>After fighting with GitHub Action and workflows, I finally figured out how to deploy Eleventy on GitHub Pages.
+I'm not an expert on GitHub Actions (in fact, I know practically nothing about it) so I'm sure there's a much better way to do this, but this works.
+All the sources I could find on the web were contradictory, didn't work at all, or assumed any knowledge of GitHub Actions, so here's something that works,
+and is itself an Eleventy site deployed on GitHub Pages using this method.
+I will update this page if I ever change how I do this, so it <em>should</em> always work.</p>
+<h2>Eleventy Build Workflow</h2>
+<p>This is the workflow that builds using Eleventy whenever changes are pushed to the <code>main</code> branch.
+It outputs the build to the <code>gh-pages</code> branch, where GitHub Pages is deploying from.</p>
+<pre><code class="language-yaml">name: Build Eleventy
+
+on:
+  push:
+    branches:
+      - main
+      
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    name: Eleventy Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        uses: TartanLlama/actions-eleventy@v1.3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # My Eleventy directory, default is &quot;./_site&quot;
+          publish_dir: ./build 
+          github_token: $
+</code></pre>
+<h2>GitHub Pages Settings</h2>
+<p>The Pages source is set to &quot;Deploy from a branch&quot; with the branch set to <code>gh-pages</code>. My custom domain is set here as well.</p>
+<h2>CNAME File</h2>
+<p>This is what kept screwing me up. When you set a custom domain in Pages, it create a <code>CNAME</code> file in the root of the chosen branch.
+The Eleventy build would overrwrite this file, reverting it back to the <code>*.github.io</code> domain.
+To fix this, I created the CNAME in the root of the Eleventy project and added it as a <code>PassthroughCopy</code> in <code>.eleventy.js</code></p>
+<pre><code class="language-js">module.exports = function (config) {
+  // ...
+  config.addPassthroughCopy({ &quot;CNAME&quot;: &quot;CNAME&quot; });
+  // ...
+}
+</code></pre>
+<p>This includes the <code>CNAME</code> in the Eleventy build which is the root of <code>gh-pages</code>, where GitHub pages is looking for it.</p>
+
+	</main>
+	<footer>
+		<hr class="big">
+		<div>
+			<h3 class="squish"><a href="/">calvin.larimo.re</a></h3>
+			<h3><a href="">Back to Top</a></h3>
+			<h3>© Calvin Larimore 2022</h3>
+		</div>
+	</footer>
+</body>
+</html>
