@@ -1,0 +1,42 @@
+---
+site_title: Calvin Larimore
+---
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="/style.css">
+	{%- if title -%}
+		<title>{{ site_title }} - {{ title }}</title>
+	{%- else -%}
+		<title>{{ site_title }}</title>
+	{%- endif -%}
+</head>
+<body>
+	<nav>
+		<h1><a href="/">{{ site_title }}</a></h1>
+		{%- if nav -%}
+			<h2>
+				{%- for link in nav -%}
+					{%- if loop.index0 -%}
+						<span> + </span>
+					{%- endif -%}
+					<a title="{{ link.description }}" href="{{ link.url }}">{{ link.title }}</a>
+				{%- endfor -%}
+			</h2>
+		{%- endif -%}
+		<hr class="big">
+	</nav>
+	<main>
+		{{ content | safe }}
+	</main>
+	<footer>
+		<hr class="big">
+		<div>
+			<h3 class="squish"><a href="/">calvin.larimo.re</a></h3>
+			<h3><a href="">Back to Top</a></h3>
+			<h3>© Calvin Larimore {% year %}</h3>
+		</div>
+	</footer>
+</body>
+</html>

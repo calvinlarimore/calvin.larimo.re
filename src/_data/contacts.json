@@ -1,0 +1,26 @@
+{
+	"email": {
+		"title": "Email",
+		"name": "calvin@larimo.re",
+		"url": "mailto:calvin@larimo.re"
+	},
+	"github": {
+		"title": "GitHub",
+		"name": "@CalvinLarimore",
+		"url": "https://github.com/calvinlarimore"
+	},
+	"twitter": {
+		"title": "Twitter",
+		"name": "@CalvinLarimore",
+		"url": "https://twitter.com/calvinlarimore"
+	},
+	"discord": {
+		"title": "Discord",
+		"name": "@Mishandle#0125"
+	},
+	"guilded": {
+		"title": "Guilded",
+		"name": "@c",
+		"url": "https://guilded.gg/u/calvin"
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "name": "calvin.larimo.re",
+  "version": "1.0.0",
+  "description": "https://calvin.larimo.re",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve --watch"
+  },
+  "keywords": [],
+  "author": "Calvin Larimore",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.3"
+  }
+}
