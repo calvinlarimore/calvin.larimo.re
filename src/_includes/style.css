@@ -57,7 +57,7 @@ nav h2 {
 }
 
 footer {
-	color: #3c3836;
+	color: #928374;
 }
 
 footer div {
@@ -85,6 +85,11 @@ footer div {
 
 footer a {
 	color: inherit;
+}
+
+footer a::selection {
+	background: #928374;
+	color: #3c3836;
 }
 
 main {
