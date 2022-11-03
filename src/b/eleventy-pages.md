@@ -7,7 +7,7 @@ summary: A very simple way to deploy Eleventy on GitHub Pages that actually work
 ---
 
 # Deploying Eleventy on GitHub Pages
-After fighting with GitHub Action and workflows, I finally figured out how to deploy Eleventy on GitHub Pages.
+After fighting with GitHub Actions and workflows for quite a while, I finally figured out how to deploy Eleventy on GitHub Pages.
 I'm not an expert on GitHub Actions (in fact, I know practically nothing about it) so I'm sure there's a much better way to do this, but this works.
 All the sources I could find on the web were contradictory, didn't work at all, or assumed any knowledge of GitHub Actions, so here's something that works, 
 and is itself an Eleventy site deployed on GitHub Pages using this method.
@@ -61,3 +61,6 @@ module.exports = function (config) {
 ```
 
 This includes the `CNAME` in the Eleventy build which is the root of `gh-pages`, where GitHub pages is looking for it. 
+
+## The Future
+I definitely want to learn more about GitHub Actions because they seem super powerful, and when I do I will improve this workflow. Hopefully I can condense it into one workflow instead of two, because currently you have to wait for runners three times (Eleventy build, GitHub Pages build (which does nothing :/), and GitHub Pages deploy).
