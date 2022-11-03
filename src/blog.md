@@ -8,7 +8,7 @@ There's nothing here...
 
 ---
 
-{% for blogpost in collections.blogposts | reverse %}
+{% for blogpost in collections.blogposts %}
 ## [{{ blogpost.data.title }}]({{ blogpost.data.page.url }})
 {{ blogpost.data.summary }}
 
