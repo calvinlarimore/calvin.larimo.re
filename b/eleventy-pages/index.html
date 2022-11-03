@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="/style.css"><title>Calvin Larimore - Deploying Eleventy on GitHub Pages</title></head>
 <body>
 	<nav>
-		<h1><a href="/">Calvin Larimore</a></h1><h2><a title="" href="/">&lt;- Home</a></h2><hr class="big">
+		<h1><a href="/">Calvin Larimore</a></h1><h2><a title="" href="/blog">&lt;- Blog</a></h2><hr class="big">
 	</nav>
 	<main>
 		
@@ -58,6 +58,7 @@ To fix this, I created the CNAME in the root of the Eleventy project and added i
 <p>This includes the <code>CNAME</code> in the Eleventy build which is the root of <code>gh-pages</code>, where GitHub pages is looking for it.</p>
 <h2>The Future</h2>
 <p>I definitely want to learn more about GitHub Actions because they seem super powerful, and when I do I will improve this workflow. Hopefully I can condense it into one workflow instead of two, because currently you have to wait for runners three times (Eleventy build, GitHub Pages build (which does nothing :/), and GitHub Pages deploy).</p>
+
 
 	</main>
 	<footer>
