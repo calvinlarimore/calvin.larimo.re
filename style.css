@@ -1,0 +1,134 @@
+@font-face {
+	font-family: FixedSysExcelsior;
+	src: url(FSEX302-alt.ttf);
+}
+
+::selection {
+	background: #928374;
+	color: #3c3836;
+}
+
+html {
+	background-color: #282828;
+	margin: 0;
+	font-family: FixedSysExcelsior, monospace;
+	color: #ebdbb2;
+}
+
+body {
+	box-sizing: border-box;
+	max-width: 1024px;
+	margin: 0 auto;
+
+	min-height: 100vh;
+
+	border-style: solid;
+	border-color: #3c3836;
+	border-width: 0 1rem;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+nav h1 {
+	margin: 0;
+	padding: 0.5rem 0 0 1.5rem;
+	font-size: 3rem;
+}
+
+nav h1 a {
+	color: #ebdbb2;
+}
+
+nav h1 a::selection {
+	color: #3c3836;
+}
+
+nav h2 {
+	margin: 0;
+	padding: 0 1.5rem;
+}
+
+.big {
+	margin: 0;
+	margin-top: 1rem;
+	
+	border-width: 0.5rem;
+}
+
+footer {
+	color: #3c3836;
+}
+
+footer div {
+	padding: 0 1rem;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+	/*.squish {
+		display: none;
+	}*/
+
+	footer div {
+		flex-direction: column;
+	}
+
+	footer div h3 {
+		margin: 0.5rem 0;
+	}
+}
+
+footer a {
+	color: inherit;
+}
+
+main {
+	flex: 1;
+	padding: 1px 2rem;
+}
+
+a {
+	color: #fabd2f;
+	text-decoration: none;
+}
+
+a::selection {
+	color: inherit;
+}
+
+hr {
+	border-color: #3c3836;
+	border-style: solid;
+	border-width: 0.25rem;
+}
+
+ul {
+	list-style-type: square;
+}
+
+blockquote {
+	padding: 1px 1rem;
+	background-color: #3c3836;
+
+	border-style: solid;
+	border-color: #504945;
+	border-width: 0 0 0 1rem;
+}
+
+pre {
+	padding: 0.5rem;
+	background-color: #1d2021;
+}
+
+blockquote pre {
+	background-color: #282828;
+}
+
+code {
+	font-family: FixedSysExcelsior, monospace;
+}
