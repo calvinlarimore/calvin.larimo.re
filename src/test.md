@@ -1,5 +1,5 @@
 ---
-layout: post.njk
+layout: page.njk
 tags: post
 title: Test
 ---

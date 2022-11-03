@@ -1,5 +1,5 @@
 ---
-layout: post.njk
+layout: blogpost.njk
 parent: /blog
 tags: blogposts
 title: A Blog Post
