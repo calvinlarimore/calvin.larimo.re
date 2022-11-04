@@ -41,7 +41,7 @@ jobs:
         with:
           # My Eleventy directory, default is &quot;./_site&quot;
           publish_dir: ./build 
-          github_token: $
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 </code></pre>
 <h2>GitHub Pages Settings</h2>
 <p>The Pages source is set to &quot;Deploy from a branch&quot; with the branch set to <code>gh-pages</code>. My custom domain is set here as well.</p>
