@@ -17,6 +17,7 @@ I will update this page if I ever change how I do this, so it *should* always wo
 This is the workflow that builds using Eleventy whenever changes are pushed to the `main` branch.
 It outputs the build to the `gh-pages` branch, where GitHub Pages is deploying from.
 
+{% raw %}
 ```yaml
 name: Build Eleventy
 
@@ -43,6 +44,7 @@ jobs:
           publish_dir: ./build 
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
+{% endraw %}
 
 ## GitHub Pages Settings
 The Pages source is set to "Deploy from a branch" with the branch set to `gh-pages`. My custom domain is set here as well.
