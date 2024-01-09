@@ -3,13 +3,13 @@ layout: generic.njk
 ---
 
 # About Me
-Hi! I'm Calvin Larimore and I never update this site :)
+Hi! I'm Calvin Larimore and I never update this site :)  
 Come bother me over on Discord if you want I guess ¯\\\_(ツ)_/¯
 
 ---
 
 # Contact
-(note from 2 years later: this section does not read like something i wrote and i hate it)
+*(note from 2 years later: this section does not read like something i wrote and i hate it)*
 
 Feel free to reach out about anything!
 
