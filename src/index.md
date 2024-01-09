@@ -3,12 +3,14 @@ layout: generic.njk
 ---
 
 # About Me
-Hi! I'm Calvin Larimore (oh thats weird, ive never written a bio with my full real name).
-I'm a 16 year old tinkerer from the Pacific Northwest USA who loves to learn new things and figure out how things work.
+Hi! I'm Calvin Larimore and I never update this site :)
+Come bother me over on Discord if you want I guess ¯\\\_(ツ)_/¯
 
 ---
 
 # Contact
+(note from 2 years later: this section does not read like something i wrote and i hate it)
+
 Feel free to reach out about anything!
 
 I've got nothing but time, and would love to hear your thoughts on any of my projects or other things.
