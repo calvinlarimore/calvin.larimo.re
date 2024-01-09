@@ -9,18 +9,13 @@
 		"name": "@CalvinLarimore",
 		"url": "https://github.com/calvinlarimore"
 	},
-	"twitter": {
-		"title": "Twitter",
-		"name": "@CalvinLarimore",
-		"url": "https://twitter.com/calvinlarimore"
-	},
 	"discord": {
 		"title": "Discord",
-		"name": "@Mishandle#0125"
+		"name": "@mishandle"
 	},
-	"guilded": {
-		"title": "Guilded",
-		"name": "@c",
-		"url": "https://guilded.gg/u/calvin"
+	"steam": {
+		"title": "Steam",
+		"name": "Shopping Cart Connoisseur",
+		"url": "https://steamcommunity.com/id/CartConnoisseur"
 	}
 }
