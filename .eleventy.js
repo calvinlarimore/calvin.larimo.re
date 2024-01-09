@@ -3,6 +3,7 @@ module.exports = function (config) {
 	config.addPassthroughCopy({ "./src/_includes/FSEX302-alt.ttf": "FSEX302-alt.ttf" });
 	
 	config.addPassthroughCopy({ "CNAME": "CNAME" });
+	config.addPassthroughCopy("static");
 
 	config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
