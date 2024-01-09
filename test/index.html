@@ -119,8 +119,7 @@ and code blocks:</p>
 <li>This is the second list item.</li>
 </ol>
 <p>Here's some example code:</p>
-<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);
-</code></pre>
+<p>return shell_exec(&quot;echo $input | $markdown_script&quot;);</p>
 </blockquote>
 <p>Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
@@ -233,8 +232,7 @@ to be indented <em>twice</em> -- 8 spaces or two tabs:</p>
 <ul>
 <li>
 <p>A list item with a code block:</p>
-<pre><code>&lt;code goes here&gt;
-</code></pre>
+<p><code goes here></p>
 </li>
 </ul>
 <h3>Code Blocks</h3>
@@ -245,13 +243,11 @@ in both <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.</p>
 <p>To produce a code block in Markdown, simply indent every line of the
 block by at least 4 spaces or 1 tab.</p>
 <p>This is a normal paragraph:</p>
-<pre><code>This is a code block.
-</code></pre>
+<p>This is a code block.</p>
 <p>Here is an example of AppleScript:</p>
-<pre><code>tell application &quot;Foo&quot;
-    beep
-end tell
-</code></pre>
+<p>tell application &quot;Foo&quot;
+beep
+end tell</p>
 <p>A code block continues until it reaches a line that is not indented
 (or the end of the article).</p>
 <p>Within a code block, ampersands (<code>&amp;</code>) and angle brackets (<code>&lt;</code> and <code>&gt;</code>)
@@ -259,10 +255,9 @@ are automatically converted into HTML entities. This makes it very
 easy to include example HTML source code using Markdown -- just paste
 it and indent it, and Markdown will handle the hassle of encoding the
 ampersands and angle brackets. For example, this:</p>
-<pre><code>&lt;div class=&quot;footer&quot;&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
+<p><div class="footer">
+© 2004 Foo Corporation
+</div></p>
 <p>Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.</p>
@@ -302,7 +297,7 @@ normal paragraph. For example:</p>
 		<div>
 			<h3 class="squish"><a href="/">calvin.larimo.re</a></h3>
 			<h3><a href="#">Back to Top</a></h3>
-			<h3>© Calvin Larimore 2022</h3>
+			<h3>© Calvin Larimore 2024</h3>
 		</div>
 	</footer>
 </body>
